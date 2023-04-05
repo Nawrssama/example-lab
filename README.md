@@ -10,3 +10,5 @@
 ### How do you run tests?
 
 > - You need to run pytest in the tirmenal
+
+Pull Request link :  https://github.com/Nawrssama/math-series/pull/3
