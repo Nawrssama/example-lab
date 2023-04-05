@@ -1,4 +1,4 @@
-# math-series
+# Math-series
 
 ## Author: Nawras Hassan Albibi
 
