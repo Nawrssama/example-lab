@@ -1,8 +1,28 @@
 import pytest
 from series.series import Fibonacci
 from series.series import Lucas
+from series.series import sum_series
 
 #______________________________________________Fibonacci__________________________________________________
+
+"""
+    Computes the nth Fibonacci number.
+
+    Parameters:
+    n (int): The index of the Fibonacci number to compute.
+
+    Returns:
+    int: The nth Fibonacci number.
+
+    Examples:
+    >>> Fibonacci(0)
+    0
+    >>> Fibonacci(1)
+    1
+    >>> Fibonacci(10)
+    55
+
+"""
 
 
 def test_Fibonacci_one():
@@ -49,6 +69,26 @@ def test_Fibonacci_eight():
 #______________________________________________Lucas__________________________________________________
 
 
+"""
+    Computes the nth Lucas number.
+
+    Parameters:
+    n (int): The index of the Lucas number to compute.
+
+    Returns:
+    int: The nth Lucas number.
+
+    Examples:
+    >>> Lucas(0)
+    2
+    >>> Lucas(1)
+    1
+    >>> Lucas(10)
+    123
+
+"""
+
+
 def test_Lucas_one():
     actual = Lucas(0)
     expected = 2
@@ -89,3 +129,40 @@ def test_Lucas_eight():
     expected = 29
     assert actual == expected # assert : is actual equal the expected
 
+
+#______________________________________________sum_series__________________________________________________
+
+
+"""
+    Computes the nth number in a series defined by the values of a and b.
+
+    If a=0 and b=1, the series is the Fibonacci sequence.
+    If a=2 and b=1, the series is the Lucas sequence.
+    If a and b are any other values, the series is defined by the recurrence relation: sum_series(n-1,a,b) + sum_series(n-2,a,b)
+
+    Parameters:
+    n (int): The index of the number to compute in the series.
+    a (int, optional): The first value in the series. Default is 0.
+    b (int, optional): The second value in the series. Default is 1.
+
+    Returns:
+    int: The nth number in the series.
+
+"""
+
+def test_sum_series():
+    actual=sum_series(2,3,4)
+    expected=7
+    assert actual == expected
+def test_sum_series_1():
+    actual=sum_series(5,1,4)
+    expected=23
+    assert actual == expected
+def test_sum_series_2():
+    actual=sum_series(5)
+    expected=5
+    assert actual == expected
+def test_sum_series_2():
+    actual=sum_series(5,2,1)
+    expected=11
+    assert actual == expected
