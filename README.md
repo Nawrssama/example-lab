@@ -16,5 +16,9 @@
 
 > - You need to run pytest in the tirmenal
 
+
 > - pytest ./tests/tests_series.py 
+
+
+Pull Request link :  https://github.com/Nawrssama/math-series/pull/3
 
