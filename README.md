@@ -20,5 +20,5 @@
 > - pytest ./tests/tests_series.py 
 
 
-Pull Request link :  https://github.com/Nawrssama/math-series/pull/3
+Pull Request link :  https://github.com/Nawrssama/math-series/pull/4/
 
